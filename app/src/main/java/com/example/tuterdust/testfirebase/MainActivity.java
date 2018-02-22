@@ -42,17 +42,21 @@ public class MainActivity extends AppCompatActivity {
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = userField.getText().toString();
-                String password = passwordField.getText().toString();
-                doSignInOperation(email, password);
+                try {
+                    String email = userField.getText().toString();
+                    String password = passwordField.getText().toString();
+                    doSignInOperation(email, password);
+                } catch (Exception e) {}
             }
         });
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public  void onClick(View view) {
-                String email = userField.getText().toString();
-                String password = passwordField.getText().toString();
-                doSignUpOperation(email, password);
+                try {
+                    String email = userField.getText().toString();
+                    String password = passwordField.getText().toString();
+                    doSignUpOperation(email, password);
+                } catch (Exception e) {}
             }
         });
 
